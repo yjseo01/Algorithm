@@ -16,7 +16,7 @@ start2 = C
 end1 = B
 end2 = D
 
-cnt = 100
+cnt = 100 # 실행횟수
 ans = 0
 
 while cnt > 0:
@@ -28,10 +28,10 @@ while cnt > 0:
     f1 = length(AB1, CD1)
     f2 = length(AB2, CD2)
 
-    if f1 <= f2:
+    if f1 <= f2: # f(mid1) <= f(mid2) 이면 mid2부터 end까지 최솟값 존재 x
         end1 = AB2
         end2 = CD2
-    else:
+    else: # f(mid1) > f(mid2) 이면 start부터 mid1까지 최솟값 존재 x
         start1 = AB1
         start2 = CD1
 
