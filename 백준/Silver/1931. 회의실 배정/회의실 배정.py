@@ -15,10 +15,7 @@ else:
     cnt = 1
 
 for i in meetings:
-    if last[1] <= i[0]:
-        cnt += 1
-        last = i
-    elif last[0] >= i[1]:
+    if last[1] <= i[0] or last[0] >= i[1]:
         cnt += 1
         last = i
 
