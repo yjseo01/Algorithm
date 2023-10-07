@@ -31,6 +31,5 @@ int solution(vector<int> cards) {
     sort(lengths.begin(), lengths.end());
     
     answer = lengths[lengths.size() - 1] * lengths[lengths.size() - 2];
-    
     return answer;
 }
