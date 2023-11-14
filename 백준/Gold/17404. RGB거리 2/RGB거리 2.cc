@@ -34,33 +34,9 @@ int main(void) {
             dp[2][j] = min(dp[0][j - 1], dp[1][j - 1]) + arr[2][j];
         }
 
-        for (int j = n - 1; j > 0; j--) {
-            for (int k = 0; k < 3; k++) {
-                if (lastColor[k] == 0) {
-                    if (dp[1][j - 1] < dp[2][j - 1]) {
-                        lastColor[k] = 1;
-                    } else {
-                        lastColor[k] = 2;
-                    }
-                } else if (lastColor[k] == 1) {
-                    if (dp[0][j - 1] < dp[2][j - 1]) {
-                        lastColor[k] = 0;
-                    } else {
-                        lastColor[k] = 2;
-                    }
-                } else {
-                    if (dp[0][j - 1] < dp[1][j - 1]) {
-                        lastColor[k] = 0;
-                    } else {
-                        lastColor[k] = 1;
-                    }
-                }
-            }
-        }
-
-        for (int i = 0; i < 3; i++) {
-            if (lastColor[i] != i) {
-                ans = min(ans, dp[i][n - 1]);
+        for (int j = 0; j < 3; j++) {
+            if (j != i) {
+                ans = min(ans, dp[j][n - 1]);
             }
         }
     }
