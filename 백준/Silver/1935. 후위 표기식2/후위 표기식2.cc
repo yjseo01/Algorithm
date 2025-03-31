@@ -6,14 +6,13 @@ using namespace std;
 
 int main()
 {
-	int n, k;
+	int n;
 	string postfix;
 	vector<double> stack;
 	cin >> n >> postfix;
 	vector<int> vals(n, 0);
 	for (int i = 0; i < n; i++)
 		cin >> vals[i];
-	k = postfix.length();
 
 	double x, y;
 	for (char c : postfix)
