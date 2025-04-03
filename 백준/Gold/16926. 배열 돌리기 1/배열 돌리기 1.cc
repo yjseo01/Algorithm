@@ -3,7 +3,7 @@
 #include <vector>
 using namespace std;
 
-vector<vector<int>> rotateVec(vector<vector<int>> vec, int n, int m);
+vector<vector<int>> rotateVec(vector<vector<int>>& vec, int n, int m);
 
 int main()
 {
@@ -30,7 +30,7 @@ int main()
 	return 0;
 }
 
-vector<vector<int>> rotateVec(vector<vector<int>> vec, int n, int m)
+vector<vector<int>> rotateVec(vector<vector<int>>& vec, int n, int m)
 {
 	vector<vector<int>> tmp(n, vector<int> (m, 0));
 
