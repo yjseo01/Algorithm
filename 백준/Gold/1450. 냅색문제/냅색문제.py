@@ -1,6 +1,7 @@
 import sys
 import bisect
 from itertools import combinations
+input = sys.stdin.readline
 
 def get_sub_sum(weights):
     result = []
